@@ -1,0 +1,91 @@
+.btn-primary
+  padding: 5px
+  border: 2px solid white
+  border-radius: 38px
+  width: max-content
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+  @media screen and (min-width: 900px)
+    left: 0
+    transform: none
+  a, div
+    color: $font-orange!important
+    background: #fff
+    padding: 20px 50px 20px 30px
+    border-radius: 38px
+    display: inline-block
+    font-weight: $bold
+    font-size: 18px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      background: url("/assets/icons/Pfeil_Orange.svg") no-repeat center
+      right: 20px
+      top: 50%
+      transform: translateY(-50%)
+
+.btn-secondary, .show-more-blogposts
+  padding: 5px
+  border: 2px solid #002D67
+  border-radius: 38px
+  width: max-content
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+  @media screen and (min-width: 900px)
+    left: 0
+    transform: none
+  a, div
+    color: #fff
+    background: #002D67
+    padding: 20px 50px 20px 30px
+    border-radius: 38px
+    display: inline-block
+    font-weight: $bold
+    font-size: 18px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      background: url("/assets/icons/Pfeil_weiss.svg") no-repeat center
+      right: 20px
+      top: 50%
+      transform: translateY(-50%)
+
+.btn
+  cursor: pointer
+  a, div
+    transition: .3s ease-in-out
+  @media screen and (min-width: 900px)
+    &:hover
+      a, div
+        transition: .3s ease-in-out
+        padding: 20px 60px 20px 30px
+
+.back-button
+  color: #0066B3!important
+  display: inline-block
+  padding-left: 20px
+  font-weight: bold
+  margin: 20px 0
+  font-size: 18px
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    background: url("/assets/icons/Pfeil_Blog.svg")
+    rotate: 180deg
+    width: 12px
+    height: 12px
+    background-size: 12px 12px
+    left: 0
+    top: 4px
+
+
+

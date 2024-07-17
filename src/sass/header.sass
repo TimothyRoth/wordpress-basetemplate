@@ -1,0 +1,124 @@
+header
+  position: relative
+  padding: 40px 0
+  .custom-logo-link
+    display: inline-block
+    width: 100%
+    max-width: 360px
+    img
+      width: 100%
+      height: auto
+
+  .info-bar
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    background: $font-orange
+    padding: 20px
+    z-index: 2
+    cursor: pointer
+    border-bottom-left-radius: 30px
+    border-top-left-radius: 30px
+    @media screen and (min-width: 900px)
+      display: flex!important
+      .inner
+        opacity: 1!important
+        max-width: 300px!important
+        max-height: 300px!important
+    &.active
+      .inner
+        opacity: 1
+        max-width: 300px
+        max-height: 300px
+
+      .trigger
+        opacity: 0
+        max-height: 0
+        overflow: hidden
+
+    .trigger
+      transition: .7s ease-in-out
+      display: flex
+      @media screen and (min-width: 900px)
+        display: none
+
+    .inner
+      opacity: 0
+      max-width: 0
+      max-height: 0
+      overflow: hidden
+      transition: .3s ease-in-out
+
+      &:hover
+        @media screen and (min-width: 900px)
+          li
+            padding-left: 45px
+            transition: .3s ease-in-out
+            a
+              opacity: 1
+              transition: .3s ease-in-out
+              max-width: 300px!important
+
+      ul
+        padding-left: 0
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        gap: 30px
+
+        li
+          padding-left: 45px
+          position: relative
+          @media screen and (min-width: 900px)
+            transition: .3s ease-in-out
+            padding-left: 25px
+            height: 10px
+
+          &:before
+            width: 25px
+            height: 25px
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+          &.menu-item-24
+            &:before
+              content: ''
+              background: url("/assets/icons/Header_Telefon.svg") no-repeat
+              background-size: 25px
+
+          &.menu-item-25
+            &:before
+              content: ''
+              background: url("/assets/icons/Header_Termin.svg") no-repeat
+              background-size: 25px
+
+          &.menu-item-26
+            &:before
+              content: ''
+              background: url("/assets/icons/Header_Live-Chat.svg") no-repeat
+              background-size: 25px
+
+          &.menu-item-27
+            &:before
+              content: ''
+              background: url("/assets/icons/Header_Homepage.svg") no-repeat
+              background-size: 25px
+
+          &.menu-item-28
+            &:before
+              content: ''
+              background: url("/assets/icons/Header_Bewertungen.svg") no-repeat
+              background-size: 25px
+
+          a
+            color: #fff
+            @media screen and (min-width: 900px)
+              transition: .3s ease-in-out
+              display: inline-block
+              opacity: 0
+              max-width: 0!important
+
+

@@ -1,0 +1,13 @@
+.faq-container
+  .drop-down-title
+    cursor: pointer
+  .drop-down-content
+    opacity: 0
+    z-index: -1
+    max-height: 0
+    transition: .3s ease-in-out
+    &.active
+      transition: .3s ease-in-out
+      max-height: 1000px
+      opacity: 1
+      z-index: 1

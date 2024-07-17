@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="590.98" height="701.052" viewBox="0 0 590.98 701.052">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rechteck_263" data-name="Rechteck 263" width="465.213" height="612.09" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Gruppe_537" data-name="Gruppe 537" transform="translate(0 104.65) rotate(-13)">
+    <g id="Gruppe_514" data-name="Gruppe 514" clip-path="url(#clip-path)">
+      <path id="Pfad_343" data-name="Pfad 343" d="M463.931.778q-1.553,2.559-3.2,5.073" fill="none" stroke="#0066b3" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Pfad_344" data-name="Pfad 344" d="M453.764,15.632c-16.929,22-39.809,39.807-66.828,47.025C347.111,73.295,316.418,48.7,279.7,39.385c-17.526-4.446-36.438-5.274-53.424.926-53.193,19.414-61.057,80.121-58.639,129.474,3.011,61.432,27.425,132.446-8.855,188.478-15.266,23.578-39.656,39.517-63.892,53.715S45.35,439.723,26.363,460.423-4.356,511.061,4.512,537.714c11.962,35.95,47.829,52.444,83.642,58.311" fill="none" stroke="#0066b3" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="12.008 12.008"/>
+      <path id="Pfad_345" data-name="Pfad 345" d="M94.091,596.9q2.988.395,5.959.7" fill="none" stroke="#0066b3" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Pfad_346" data-name="Pfad 346" d="M94.811,612.09l26.741-13.407L96.574,582.224Z" fill="#0066b3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,95 @@
+*
+  -webkit-tap-highlight-color: transparent
+  box-sizing: border-box
+
+html
+  scroll-behavior: smooth
+
+body
+  margin: 0
+  padding: 0
+  font-family: $font, sans-serif
+  height: 100vh
+  display: flex
+  flex-direction: column
+  line-height: 1.2
+  &.modal-open
+    overflow: hidden
+
+h1, h2, h3
+  color: #003064
+
+h1, h2
+  line-height: 1
+  font-size: 35px
+
+h3
+  font-size: 30px
+
+.wrapper
+  max-width: 1250px
+  padding: 0 20px
+  position: relative
+  margin: 0 auto
+
+  .text-content
+    line-height: 1.5
+    font-size: 18px
+
+orange
+  color: $font-orange
+
+blue
+  color: #0066B3
+
+a
+  text-decoration: none
+
+  &:hover, &:visited, &:link, &:active
+    color: inherit
+
+section
+  position: relative
+  padding: 80px 0
+
+.pointer
+  cursor: pointer
+
+.block
+  display: block !important
+
+.hide
+  display: none !important
+
+.flex
+  display: flex !important
+
+.mobile-container
+  @media screen and (min-width: 900px)
+    display: none
+
+.desktop-container
+  display: none
+  @media screen and (min-width: 900px)
+    display: flex
+
+.checkmark-icons
+  list-style-type: none
+  padding-left: 0
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+  li
+    position: relative
+    padding-left: 35px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 25px
+      height: 25px
+      background: url("/assets/icons/Check.svg") no-repeat center
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
