@@ -223,4 +223,4 @@ add_action('init', function () {
 This modular approach to creating meta-boxes simplifies adding custom functionality to your WordPress themes or plugins. The entire system is built with flexibility in mind, allowing you to easily extend or modify features as needed.
 
 For any questions or assistance with the theme, feel free to contact:
-[roth@marketport.de](mailto:roth@marketport.de)
+[me@timothy-roth.de](mailto:me@timothy-roth.de)
