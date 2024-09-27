@@ -9,7 +9,7 @@
   @media screen and (min-width: 900px)
     left: 0
     transform: none
-  a, div
+  a, div, input
     color: $font-orange!important
     background: #fff
     padding: 20px 50px 20px 30px
@@ -18,15 +18,15 @@
     font-weight: $bold
     font-size: 18px
     position: relative
-    &:after
-      content: ''
-      position: absolute
-      width: 20px
-      height: 20px
-      background: url("/assets/icons/Pfeil_Orange.svg") no-repeat center
-      right: 20px
-      top: 50%
-      transform: translateY(-50%)
+  &:after
+    content: ''
+    position: absolute
+    width: 20px
+    height: 20px
+    background: url("/assets/icons/Pfeil_Orange.svg") no-repeat center
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
 
 .btn-secondary, .show-more-blogposts
   padding: 5px
@@ -39,7 +39,7 @@
   @media screen and (min-width: 900px)
     left: 0
     transform: none
-  a, div
+  a, div, input
     color: #fff
     background: #002D67
     padding: 20px 50px 20px 30px
@@ -48,23 +48,26 @@
     font-weight: $bold
     font-size: 18px
     position: relative
-    &:after
-      content: ''
-      position: absolute
-      width: 20px
-      height: 20px
-      background: url("/assets/icons/Pfeil_weiss.svg") no-repeat center
-      right: 20px
-      top: 50%
-      transform: translateY(-50%)
+  &:after
+    content: ''
+    position: absolute
+    width: 20px
+    height: 20px
+    background: url("/assets/icons/Pfeil_weiss.svg") no-repeat center
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
 
 .btn
   cursor: pointer
-  a, div
+  a, div, input
     transition: .3s ease-in-out
+    cursor: pointer
+    outline: none
+    border: none
   @media screen and (min-width: 900px)
     &:hover
-      a, div
+      a, div, input
         transition: .3s ease-in-out
         padding: 20px 60px 20px 30px
 

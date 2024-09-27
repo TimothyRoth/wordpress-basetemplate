@@ -1,8 +1,4 @@
-<?php
-
-global $directory;
-global $theme_functions; ?>
-
+<?php use basetemplate\ThemeWizard; ?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -15,32 +11,38 @@ global $theme_functions; ?>
 </head>
 <body <?php body_class(); ?>>
 
-<header id="header" class="header">
+<?php if (class_exists(ThemeWizard::class)) { ?>
+    <header id="header" class="header">
 
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <?= $theme_functions->custom_logo() ?>
+            <?= ThemeWizard::HtmlContainer()->custom_logo() ?>
 
-        <div class="info-bar mobile-container">
-            <div class="inner">
-                <?= wp_nav_menu([
-                    'theme_location' => 'main',
-                ]) ?>
-            </div>
-            <div class="trigger">
-                <img src="<?= $directory ?>/assets/icons/Info.svg" alt="trigger">
-            </div>
-        </div>
-    </div>
-
-    <!-- Modals -->
-    <div class="trigger-test modal">
-        <div class="inner-modal">
-            <div class="close-modal">
-                <img src="<?= $directory ?>/assets/icons/close-modal.svg"/>
+            <div class="info-bar mobile-container">
+                <div class="inner">
+                    <?= wp_nav_menu([
+                        'theme_location' => 'main',
+                    ]) ?>
+                </div>
+                <div class="trigger">
+                    <img src="<?= ThemeWizard::Helper()->get_template_directory_uri() ?>/assets/icons/Info.svg"
+                         alt="trigger">
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Modals -->
-</header>
+
+        <!-- Modals -->
+        <div class="trigger-test modal">
+            <div class="inner-modal">
+                <div class="close-modal">
+                    <img src="<?= ThemeWizard::Helper()->get_template_directory_uri() ?>/assets/icons/close-modal.svg"/>
+                </div>
+                <p>Diese Modal mit der Klasse trigger-test wird getrigger indem man einen link mit der href #test
+                    definiert.</p>
+                <p>Also: modal trigger-{name} und link href #{name}</p>
+            </div>
+        </div>
+        <!-- End Modals -->
+    </header>
+<?php } ?>
 

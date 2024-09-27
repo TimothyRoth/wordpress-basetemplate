@@ -1,6 +1,10 @@
 <?php
-require_once('inc/index.php');
-$directory = get_template_directory_uri();
+
+use basetemplate\ThemeWizard;
+if (file_exists(get_template_directory(). '/vendor/autoload.php')) {
+    require_once get_template_directory() . '/vendor/autoload.php';
+    ThemeWizard::run();
+}
 
 function theme_setup(): void
 {
@@ -103,7 +107,7 @@ function theme_setup(): void
      * caused by shortcodes.
      *
      */
-    function tgm_io_shortcode_empty_paragraph_fix($content)
+    function tgm_io_shortcode_empty_paragraph_fix($content): string
     {
 
         $array = [
@@ -118,7 +122,7 @@ function theme_setup(): void
     add_filter('the_content', 'tgm_io_shortcode_empty_paragraph_fix');
 
     // Filter except length to 35 words.
-    function tn_custom_excerpt_length($length)
+    function tn_custom_excerpt_length($length): int
     {
         return 20;
     }
@@ -150,9 +154,8 @@ function basetemplate_theme_assets(): void
         wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', false, '3.6.1', true);
         wp_enqueue_script('jquery');
         // JS
-        wp_enqueue_script('bundle', get_template_directory_uri() . '/dist/main.min.js', ['wp-i18n'], '0.1', true);
-        wp_enqueue_script('baufi_lead', 'https://www.baufi-lead.de/baufilead/partner/ejzbNF35UNSyrCgPTtNK0PkUN2Fj0O/imports.js', ['wp-i18n'], '0.1', true);
-        wp_localize_script('bundle', 'ajax', ['url' => admin_url('admin-ajax.php')]);
+        wp_enqueue_script('basetemplate_ajax_bundle', get_template_directory_uri() . '/dist/main.min.js', ['wp-i18n'], '0.1', true);
+        wp_localize_script('basetemplate_ajax_bundle', 'ajax', ['url' => admin_url('admin-ajax.php')]);
         // CSS
         wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.min.css', [], '0.1', 'all');
     }
@@ -166,7 +169,6 @@ function admin_script(): void
 }
 
 add_action('admin_enqueue_scripts', 'admin_script');
-
 
 
 

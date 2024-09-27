@@ -13,6 +13,7 @@ body
   display: flex
   flex-direction: column
   line-height: 1.2
+
   &.modal-open
     overflow: hidden
 
@@ -25,6 +26,21 @@ h1, h2
 
 h3
   font-size: 30px
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], textarea
+  width: 100%
+  padding: 10px
+  border-radius: 5px
+  margin: 10px 0
+  outline: none
+  border: none
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+  font-family: $font, sans-serif
+  transition: .3s ease-in-out
+
+  &:hover
+    transition: .3s ease-in-out
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32)
 
 .wrapper
   max-width: 1250px

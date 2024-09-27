@@ -5,8 +5,10 @@
         <main>
             <div class="wrapper">
                 <article class="h-entry content">
-                    <h1 class="page-headline">Mit dem Blog bleiben Sie stets auf dem Laufenden.</h1>
                     <div class="entry-content">
+                        <div class="post-title">
+                            <h1><?= the_title(); ?></h1>
+                        </div>
                         <div class="left">
                             <?= the_post_thumbnail(); ?>
                         </div>
@@ -14,9 +16,7 @@
                             <div class="post-date">
                                 <?= get_the_date('d.m.Y'); ?>
                             </div>
-                            <div class="post-title">
-                                <h3><?= the_title(); ?></h3>
-                            </div>
+
                             <?php the_content(); ?>
                         </div>
                     </div>

@@ -18,7 +18,26 @@ const swiper = () => {
         false
     );
 
-    new Swiper('.' + parentClassName, {
+};
+
+/**
+* @param {jQuery} container - The jQuery Object that should be swipified
+ * @param {string} parentClassName - The class name of the parent container that we put in the constructor of the new Swiper(...)
+ * @param {boolean} pagination - If true, the pagination will be added to the parent container
+ * @param {boolean} arrows - If true, the arrows will be added to the parent container
+ * @param {Object} options - If you want to pass custom options to the Swiper instance, you can do it here. Otherwise, the default options will be used
+ * @returns {void}
+ *
+ * @description use this class to apply the required DOM structure to any jQuery Object / DOM Element AND Activate Arrows and/or Pagination
+* */
+const swipifyContainer = (container, parentClassName, pagination = false, arrows = false, options = null) => {
+    container.addClass('swiper-wrapper');
+    container.wrap('<div class="' + parentClassName + '"></div>');
+    container.children().wrap('<div class="swiper-slide"></div>')
+
+    const parent = jQuery('.' + parentClassName);
+
+    const defaultOptions =   {
         modules: [Navigation, Pagination],
         slidesPerView: 1,
         spaceBetween: 20,
@@ -33,16 +52,7 @@ const swiper = () => {
         },
         observer: true,
         observeParents: true,
-    })
-
-};
-
-const swipifyContainer = (container, parentClassName, pagination = false, arrows = false) => {
-    container.addClass('swiper-wrapper');
-    container.wrap('<div class="' + parentClassName + '"></div>');
-    container.children().wrap('<div class="swiper-slide"></div>')
-
-    const parent = jQuery('.' + parentClassName);
+    };
 
     if (arrows) {
         parent.append('<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>');
@@ -51,6 +61,8 @@ const swipifyContainer = (container, parentClassName, pagination = false, arrows
     if (pagination) {
         parent.append('<div class="swiper-pagination"></div>');
     }
+
+    new Swiper('.' + parentClassName, options ? options : defaultOptions);
 }
 
 module.exports = {

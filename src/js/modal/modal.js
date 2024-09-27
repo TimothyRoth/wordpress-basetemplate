@@ -7,6 +7,8 @@ const modal = () => {
 
     trigger.on('click', function () {
         const href = jQuery(this).attr('href');
+        if(!href) return;
+
         if(href.startsWith("#") && href.length > 1) {
             const action = href.replace("#", "trigger-");
             openModal(action);
